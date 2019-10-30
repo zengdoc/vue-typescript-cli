@@ -2,13 +2,21 @@
   "name": "vue-typesprict",
   "version": "0.1.0",
   "private": true,
+  "config": {
+    "environment": ""
+  },
   "scripts": {
+    "dev-dev": "npm config set vue-typesprict:environment dev&&vue-cli-service serve",
+    "dev-sit": "npm config set vue-typesprict:environment sit&&vue-cli-service serve",
+    "build-dev": "npm config set vue-typesprict:environment dev&&vue-cli-service build",
+    "build-sit": "npm config set vue-typesprict:environment sit&&vue-cli-service build",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.3.2",
+    "lodash": "^4.17.15",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
     "vue-property-decorator": "^8.3.0",
@@ -16,6 +24,7 @@
     "vuex": "^3.0.1"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.144",
     "@vue/cli-plugin-babel": "^4.0.0",
     "@vue/cli-plugin-router": "^4.0.0",
     "@vue/cli-plugin-typescript": "^4.0.0",
