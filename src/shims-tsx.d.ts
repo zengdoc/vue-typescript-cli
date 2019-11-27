@@ -13,3 +13,5 @@ declare global {
   }
   const _: LoDashStatic;
 }
+
+declare module 'element-ui';
