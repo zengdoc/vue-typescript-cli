@@ -9,7 +9,7 @@ import * as ElementUI from 'element-ui';
 import mock from '@/mock/index';
 
 // mock mode
-if (process.env.VUE_APP_MOCK === 'true') {
+if (process.env.VUE_APP_MOCK === '1') {
     mock();
 }
 

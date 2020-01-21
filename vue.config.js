@@ -1,16 +1,6 @@
-switch (process.env.npm_package_config_environment) {
-    case 'dev':
-        process.env.VUE_APP_BASE_API = 'dev';
-        process.env.VUE_APP_MOCK = process.env.npm_package_config_mock === '1';
-        break;
-    case 'sit':
-        process.env.VUE_APP_BASE_API = 'sit';
-        process.env.VUE_APP_MOCK = process.env.npm_package_config_mock === '1';
-        break;
-}
-
 const webpack = require('webpack');
 const path = require('path');
+const environment = require('./build/environment');
 
 module.exports = {
     configureWebpack: {
@@ -20,16 +10,20 @@ module.exports = {
             ],
         },
         plugins: [
+            new webpack.DefinePlugin({
+                'process.env.VUE_APP_MOCK': JSON.stringify(environment.mock),
+                'process.env.VUE_APP_BASE_API': JSON.stringify(environment.baseUrl)
+            }),
             new webpack.ProvidePlugin({
                 _: 'lodash',
-            })
+            }),
         ]
     },
 
     pluginOptions: {
-      'style-resources-loader': {
-          preProcessor: 'less',
-          patterns: [path.resolve(__dirname, 'src/assets/css/index.less')]
-      }
+        'style-resources-loader': {
+            preProcessor: 'less',
+            patterns: [path.resolve(__dirname, 'src/assets/css/index.less')]
+        }
     }
-}
+};

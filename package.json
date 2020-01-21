@@ -6,11 +6,11 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "mock": "npm config set vue-typescript:environment dev&&npm config set vue-typescript:mock 1&&vue-cli-service serve",
-    "dev-dev": "npm config set vue-typescript:environment dev&&npm config set vue-typescript:mock 0&&vue-cli-service serve",
-    "dev-sit": "npm config set vue-typescript:environment sit&&npm config set vue-typescript:mock 0&&vue-cli-service serve",
-    "build-dev": "npm config set vue-typescript:environment dev&&npm config set vue-typescript:mock 0&&vue-cli-service build",
-    "build-sit": "npm config set vue-typescript:environment sit&&npm config set vue-typescript:mock 0&&vue-cli-service build"
+    "mock": "vue-cli-service serve -mock",
+    "dev-dev": "vue-cli-service serve -dev",
+    "dev-sit": "vue-cli-service serve -sit",
+    "build-dev": "vue-cli-service build -dev",
+    "build-sit": "vue-cli-service build -sit"
   },
   "dependencies": {
     "core-js": "^3.3.2",
