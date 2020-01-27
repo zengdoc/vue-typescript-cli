@@ -1,4 +1,5 @@
 import Mock from 'mockjs';
+import example from './example';
 
 interface Request {
     url: string;
@@ -14,7 +15,9 @@ Mock.setup({
     timeout: 500,
 });
 
-const mocks = { };
+const mocks = {
+    example,
+};
 
 const mock = () => {
     _.forEach(mocks, (mocksValue: MockType) => {

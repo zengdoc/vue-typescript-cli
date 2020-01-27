@@ -3,7 +3,7 @@ const ENV = {
         mock: '1'
     },
     dev: {
-        baseUrl: 'dev',
+        baseUrl: 'localhost',
     },
     sit: {
         baseUrl: 'sit',
