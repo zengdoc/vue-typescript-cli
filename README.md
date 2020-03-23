@@ -14,23 +14,23 @@
 - [TSLint](https://github.com/palantir/tslint) 代码检查
 - [TypeScript](https://github.com/microsoft/TypeScript)
 - [vue-property-decorator](https://github.com/kaorun343/vue-property-decorator) 组件装饰器
-- [vue-router](https://github.com/vuejs/vue-router) 
+- [vue-router](https://github.com/vuejs/vue-router)
 - [vuex-module-decorators](https://github.com/championswimmer/vuex-module-decorators) Vuex装饰器
 - 环境变量配置
 
 ## 目录结构
 
 ```bash
-├── build                      
-│   │── environment.js            # 环境变量配置
-├── src														# 源代码
-│   ├── assets             			 	# 资源文件
-│   ├── mock             			 		# 模拟请求
+├── build
+│   │── environment.js              # 环境变量配置
+├── src							    # 源代码
+│   ├── assets             			# 资源文件
+│   ├── mock             			# 模拟请求
 │   ├── router                 		# router
 │   ├── service                		# http服务
 │   ├── store                  		# vuex
 │   ├── views                  		# views
-│   ├── global.d.ts               # TS全局声明
+│   ├── global.d.ts                 # TS全局声明
 ├── tsconfig.json              		# typescript 配置
 └── vue.config.js              		# vue-cli 配置
 ```
