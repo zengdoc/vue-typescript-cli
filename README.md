@@ -26,13 +26,14 @@
 ├── src                           # 源代码
 │   ├── assets.                   # 资源文件
 │   ├── mock.                     # 模拟请求
-│   ├── router                 		# router
-│   ├── service                		# http服务
-│   ├── store                  		# vuex
-│   ├── views                  		# views
-│   ├── global.d.ts								# TS全局声明
-├── tsconfig.json              		# typescript 配置
-└── vue.config.js              		# vue-cli 配置
+│   ├── router.                   # router
+│   ├── service.                  # http服务
+│   ├── store.                    # vuex
+│   ├── views.                    # views
+│   ├── global.d.ts.              # TS全局声明
+├── tsconfig.json.                # typescript 配置
+├── tslint.json.                  # tslint 配置
+└── vue.config.js.                # vue-cli 配置
 ```
 
 ## 启动项目
