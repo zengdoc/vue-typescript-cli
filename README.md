@@ -67,4 +67,4 @@ eg: npm run build-dev
 
 | IE / Edge                 | Firefox         | Chrome          | Safari          |
 | ------------------------- | --------------- | --------------- | --------------- |
-| IE10 (待测试), IE11, Edge | last 2 versions | last 2 versions | last 2 versions |
+| IE10 (待测试), IE11, Edge  | last 2 versions | last 2 versions | last 2 versions |
