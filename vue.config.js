@@ -19,11 +19,13 @@ module.exports = {
             }),
         ]
     },
-
     pluginOptions: {
         'style-resources-loader': {
             preProcessor: 'less',
             patterns: [path.resolve(__dirname, 'src/assets/css/index.less')]
         }
-    }
+    },
+    transpileDependencies: [
+        'vuex-module-decorators'
+    ],
 };
