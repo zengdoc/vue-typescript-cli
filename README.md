@@ -22,15 +22,15 @@
 
 ```bash
 ├── build
-│   │── environment.js              # 环境变量配置
-├── src							    # 源代码
-│   ├── assets             			# 资源文件
-│   ├── mock             			# 模拟请求
+│   │── environment.js						# 环境变量配置
+├── src														# 源代码
+│   ├── assets										# 资源文件
+│   ├── mock											# 模拟请求
 │   ├── router                 		# router
 │   ├── service                		# http服务
 │   ├── store                  		# vuex
 │   ├── views                  		# views
-│   ├── global.d.ts                 # TS全局声明
+│   ├── global.d.ts								# TS全局声明
 ├── tsconfig.json              		# typescript 配置
 └── vue.config.js              		# vue-cli 配置
 ```
