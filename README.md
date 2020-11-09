@@ -33,7 +33,8 @@
 │   ├── global.d.ts.              # TS全局声明
 ├── tsconfig.json.                # typescript 配置
 ├── tslint.json.                  # tslint 配置
-└── vue.config.js.                # vue-cli 配置
+├── vue.config.js.                # vue-cli 配置
+└── webpack.dll.config.js.        # webpack-dll 配置
 ```
 
 ## 启动项目
@@ -57,6 +58,15 @@ eg: npm run dev-dev
 npm run build-[环境变量]
 eg: npm run build-dev
 ```
+
+## 构建优化
+
+- webpack-dll-plugin 抽离不常变更的静态依赖
+
+  ```bash
+  更新静态依赖:
+  npm run build:dll
+  ```
 
 ## 自定义 Vue 配置
 
