@@ -1,11 +1,13 @@
 const ENV = {
     mock: {
-        mock: '1'
+        mock: 'true',
     },
     dev: {
+        mock: 'false',
         baseUrl: 'localhost',
     },
     sit: {
+        mock: 'false',
         baseUrl: 'sit',
     },
 };

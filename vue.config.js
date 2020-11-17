@@ -1,17 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
 const environment = require('./build/environment');
-const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin')
-
-function dll() {
-    const dll = ['vue', 'ui', 'common']
-    return dll.map(d => {
-        return new webpack.DllReferencePlugin({
-            context: __dirname,
-            manifest: require(`./public/dll/${d}-manifest.json`),
-        })
-    })
-}
 
 module.exports = {
     configureWebpack: {
@@ -28,15 +17,10 @@ module.exports = {
             new webpack.ProvidePlugin({
                 _: 'lodash',
             }),
-            // 不再对dll进行编译
-            ...dll(),
-            // 将 dll 注入到 生成的 html 模板中
-            new AddAssetHtmlPlugin({
-                filepath: path.resolve(__dirname, './public/dll/*.js'),
-                publicPath: '/dll',
-                outputPath: './dll'
-            })
         ]
+    },
+    chainWebpack: config => {
+        config.module.noParse(/^(vue|vue-router|vuex|vuex-router-sync|lodash|element-ui|axios)$/);
     },
     pluginOptions: {
         'style-resources-loader': {

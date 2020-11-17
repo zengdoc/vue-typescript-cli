@@ -6,16 +6,21 @@ import './assets/css/index.less';
 Vue.config.productionTip = false;
 
 import * as ElementUI from 'element-ui';
-import mock from '@/mock/index';
-
-// mock mode
-if (process.env.VUE_APP_MOCK === '1') {
-    mock();
-}
-
 Vue.use(ElementUI);
 
-new Vue({
-  router,
-  render: h => h(App),
-}).$mount('#app');
+if (process.env.VUE_APP_MOCK === 'true') {
+    import('@/mock/index')
+        .then(({ default: mock }) => {
+            mock();
+            init();
+        });
+} else {
+    init();
+}
+
+function init() {
+    new Vue({
+        router,
+        render: h => h(App),
+    }).$mount('#app');
+}
