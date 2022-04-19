@@ -48,17 +48,18 @@ npm install
 ### 启动本地开发环境
 
 ```bash
-npm version [patch/minor/major]
 npm run dev-[环境变量]
-eg: npm version patch
-		npm run dev-dev
+eg: npm run dev-dev
 ```
 
 ### 构建生产环境
 
 ```bash
+npm version [patch/minor/major]
 npm run build-[环境变量]
-eg: npm run build-dev
+eg:
+npm version patch
+npm run build-dev
 ```
 
 ## 自定义 Vue 配置
