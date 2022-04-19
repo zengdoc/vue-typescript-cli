@@ -4,14 +4,13 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --no-clean",
     "lint": "vue-cli-service lint",
     "mock": "vue-cli-service serve -mock",
     "dev-dev": "vue-cli-service serve -dev",
     "dev-sit": "vue-cli-service serve -sit",
-    "build-dev": "vue-cli-service build -dev",
-    "build-sit": "vue-cli-service build -sit",
-    "build:dll": "webpack --config webpack.dll.config.js"
+    "build-dev": "vue-cli-service build --no-clean -dev",
+    "build-sit": "vue-cli-service build --no-clean -sit"
   },
   "dependencies": {
     "axios": "^0.19.2",
@@ -37,6 +36,7 @@
     "mockjs": "^1.1.0",
     "style-resources-loader": "^1.2.1",
     "typescript": "~3.5.3",
+    "version-manage-webpack-plugin": "^1.1.2",
     "vue-cli-plugin-style-resources-loader": "^0.1.3",
     "vue-template-compiler": "^2.6.10"
   }
